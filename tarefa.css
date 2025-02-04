@@ -1,0 +1,52 @@
+/*
+com 2 valores 
+padding: top/botton - right/left
+com 3 valores
+padding: top - rught/left - botton
+com 4 valores
+padding: top - right - botton -left
+border tem 3 valores... cor,... e ..
+*/
+
+.tarefa {
+    border: 1px solid #5c5c5c;
+    border-radius: 16px;
+    padding: 16px;
+}
+
+
+ul {
+    list-style: none;
+}
+
+.descricao_tarefa {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+
+h2{
+    border-right: 1px #5c5c5c solid;
+    padding-right: 16px;
+}
+
+
+.etiqueta {
+    border: 1px solid;
+    border-radius: 4px;
+    padding: 4px 8px ; /*espaçamento (pagging)*/
+}
+
+
+.etiquetas {
+    display: flex;  /*colocar um ao lado da outra*/
+    gap: 8px;
+}
+
+
+
+.etiqueta__prioridade{
+    background-color: red;
+}
+
