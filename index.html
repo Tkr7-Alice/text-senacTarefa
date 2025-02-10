@@ -1,54 +1,93 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Atividades</title>
-    <link rel="stylesheet" href="css/tarefa.css">
-    <script src="app.js"></script>
+    <link rel="stylesheet" href="base/global.css">
+   
 </head>
 
 <body>
-    <main>
-  
-       <h1>Tarefas</h1>
+
+    
+
+    <form id="formTarefa">
+
+        <label for="descricao">Título:</label>
+        <input type="text" id="descricao" name="descricao" placeholder="ex: Revisar código crítico"> 
+       
+            
+        <label for="prioridade">Prioridade:</label>
+        <select id="prioridade" name="prioridade">
+            <option value="Alta">Alta</option>
+            <option value="Média">Média</option>
+            <option value="Baixa">Baixa</option>
+        </select>
+
+
+        <label for="data">Data:</label>
+        <input type="date" id="data" name="data">
+
+        
+
+        <label for="descricao">Descrição:</label>
+        <input type="text" id="descricao" name="descricao" placeholder="Revisar bugs críticos no módulo principal">
+
+
+        <label>Responsável(is):</label>
+        <div class="responsaveis">
+            <label><input type="checkbox" name="responsavel" value="Alice"> Alice</label>
+            <label><input type="checkbox" name="responsavel" value="Carlos"> Carlos</label>
+            <label><input type="checkbox" name="responsavel" value="Fabiano"> Fabiano</label>
+            <label><input type="checkbox" name="responsavel" value="Fernando"> Fernando</label>
+            <label><input type="checkbox" name="responsavel" value="Luisa"> Luisa</label>
+            <label><input type="checkbox" name="responsavel" value="Marcos"> Marcos</label>
+        </div>
+
+        <button type="reset" class="btn branco">Limpar</button>
+        <button type="submit" class="btn preto">Adicionar</button>
+
+    </form>
+
+    <h1>Tarefas</h1>
+    <main>   
 
         <ul> 
             <li class="tarefa">
                 <div class="etiquetas">
-                    <div class="etiqueta__prioridade"> Alta </div>
-                    <div class="etiqueta"> 12/02/2025 </div>
-                    <div class="etiqueta"> Luisa </div>
-                    <div class="etiqueta"> Fabiano </div>
+                    <div class="etiqueta__prioridade">Alta</div>
+                    <div class="etiqueta">12/02/2012</div>
+                    <div class="etiqueta">Luisa</div>
+                    <div class="etiqueta">Fabiano</div>
                 </div>
 
                 <div class="descricao_tarefa">
                     <h2>Revisar código crítico</h2>
-                    <p>Revisar Bugs crítico no módulo principal.</p>
+                    <p>Revisar bugs críticos no módulo principal.</p>
                 </div>
             </li>
 
             <li class="tarefa">
                 <div class="etiquetas">
-                 <div class="etiqueta__prioridade"> Média </div>
-                 <div class="etiqueta"> 12/02/2012 </div>
-                 <div class="etiqueta"> Alice </div>
-                 <div class="etiqueta"> Carlos </div>
-            </div>
+                    <div class="etiqueta__prioridade">Média</div>
+                    <div class="etiqueta">12/02/2012</div>
+                    <div class="etiqueta">Alice</div>
+                    <div class="etiqueta">Carlos</div>
+                </div>
 
                 <div class="descricao_tarefa">
-                 <h2>Implementar autenticação</h2>
-                 <p>Adicionar sistema de login seguro.</p>
+                    <h2>Implementar autenticação</h2>
+                    <p>Adicionar sistema de login seguro.</p>
                 </div>
             </li>
 
-
             <li class="tarefa">
                 <div class="etiquetas">
-                    <div class="etiqueta__prioridade"> Média </div>
+                    <div class="etiqueta__prioridade">Média</div>
                     <div class="etiqueta"> 12/02/2012 </div>
-                    <div class="etiqueta"> Fernado </div>
-                    
+                    <div class="etiqueta"> Fernando </div>
                 </div>
 
                 <div class="descricao_tarefa">
@@ -59,10 +98,9 @@
 
             <li class="tarefa">
                 <div class="etiquetas">
-                    <div class="etiqueta__prioridade"> Baixo </div>
-                    <div class="etiqueta"> 12/02/2012 </div>
-                    <div class="etiqueta"> Luisa </div>
-                 
+                    <div class="etiqueta__prioridade">Baixa</div>
+                    <div class="etiqueta">12/02/2012</div>
+                    <div class="etiqueta">Luisa</div>
                 </div>
 
                 <div class="descricao_tarefa">
@@ -73,7 +111,7 @@
 
             <li class="tarefa">
                 <div class="etiquetas">
-                    <div class="etiqueta__prioridade"> Baixo </div>
+                    <div class="etiqueta__prioridade">Baixa</div>
                     <div class="etiqueta"> 12/02/2012 </div>
                     <div class="etiqueta"> Fernando </div>
                 </div>
@@ -84,11 +122,11 @@
                 </div>
             </li>
 
-
-           
         </ul>
 
-
     </main>
+
+    <script src="./assets/js/app.js" type="module"></script>
+
 </body>
 </html>
