@@ -11,30 +11,24 @@
 
 <body>
 
-    
 
-    <form id="formTarefa">
-
-        <label for="descricao">Título:</label>
-        <input type="text" id="descricao" name="descricao" placeholder="ex: Revisar código crítico"> 
-       
+    <form action=""  id="formulario1" name="formulario" method="POST" name="formulario">
+        
+        <div class="input-group">
+            <label for="name">Titulo</label>
+            <input type="text" id="name" name="nome" placeholder="ex: Revisar código crítico">
+            <label for="name">Descrição</label>
+            <input type="text" id="name" name="nome" placeholder="ex: Revisar bugs críticos no módulo principal">
             
-        <label for="prioridade">Prioridade:</label>
+            <label for="prioridade">Prioridade:</label>
         <select id="prioridade" name="prioridade">
             <option value="Alta">Alta</option>
             <option value="Média">Média</option>
             <option value="Baixa">Baixa</option>
         </select>
 
-
-        <label for="data">Data:</label>
-        <input type="date" id="data" name="data">
-
-        
-
-        <label for="descricao">Descrição:</label>
-        <input type="text" id="descricao" name="descricao" placeholder="Revisar bugs críticos no módulo principal">
-
+            <label for="data" placeholder="12/12/2012">Data:</label>
+            <input type="date" id="data" name="data">
 
         <label>Responsável(is):</label>
         <div class="responsaveis">
@@ -46,15 +40,23 @@
             <label><input type="checkbox" name="responsavel" value="Marcos"> Marcos</label>
         </div>
 
-        <button type="reset" class="btn branco">Limpar</button>
-        <button type="submit" class="btn preto">Adicionar</button>
-
+        
+            
+        </div>
+        <div class="footer">
+            <button type="reset" class="btn branco" onclick="validar">
+                Limpar
+            </button>
+            <button type="submit" class="btn preto" onclick="validar">
+                Adicionar
+            </button>
+        </div>
     </form>
-
-    <h1>Tarefas</h1>
+    
+    <h1 id="centro">Tarefas</h1>
     <main>   
 
-        <ul> 
+        <ul id="sbt"> 
             <li class="tarefa">
                 <div class="etiquetas">
                     <div class="etiqueta__prioridade">Alta</div>
